@@ -1,0 +1,86 @@
+.quBox{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px 50px;
+}
+
+.quImg{
+    margin-bottom: 30px;
+}
+
+.quMsg{
+    font-size: 14px;
+    color: #606060;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quMenu>li+li{
+    border-top: 1px solid #e5e5e5;
+}
+
+.quTitle{
+    min-height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.quMenu>li.on .quTitle{
+    background-color: #FF3366;
+    background: linear-gradient(45deg, #FF3366, #ff97b1);
+    color: #fff;
+}
+
+.quTitle::before{
+    content: '\25BC';
+    transform: rotate(-90deg);
+    margin-right: 5px;
+}
+
+.quMenu>li.on .quTitle::before{
+    transform: rotate(0deg);
+    transition: .3s;
+}
+
+
+.quMenu>li.on .uqList{
+    display: block;
+}
+
+.uqList{
+    background-color: rgba(238, 238, 238, 0.5);
+    padding: 15px 10px 50px;
+    display: none;
+}
+
+.uqList p{
+    text-indent: 2em;
+    line-height: 22px;
+    padding: 15px 0;
+}
+
+.uqList p:first-child{
+    padding-top: 0;
+}
+
+.uqList ul{
+    list-style-type: decimal;
+    margin-left: 2em;
+}
+
+.uqList li{
+    line-height: 22px;
+}
+
+/* ========== hover & active 各別設定 ========== */
+@media (any-hover: hover){
+    .quTitle:hover{
+        background: linear-gradient(45deg, #b372d8, #c2a2d4);
+        color: #fff;
+    }
+}

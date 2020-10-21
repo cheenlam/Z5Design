@@ -1,0 +1,340 @@
+.showmv {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.showmv_title {
+    width: 100%;
+    height: 100%;
+    font-size: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.showmv_line{
+    width: 50%;
+    height: 29px;
+    background: url(../image/fade_line.png) no-repeat 50% 0;
+}
+
+.showmv video {
+    width: 100%;
+}
+
+/* main_service start (整合服務) */
+.main_service{
+    max-width: 1200px;
+    padding: 50px 10px;
+    margin: 0 auto 50px;
+}
+
+.main_title{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+.main_title p{
+    font-size: 80px;
+    color: #94252A;
+    font-weight: bold;
+}
+
+.service_list ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service_list li{
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 0 10px 30px;
+}
+
+.service_list li>div{
+    max-width: 320px;
+    height: 280px;
+    margin: auto;
+    padding: 25px 10px;
+    border-radius: 5px;
+    background-color: rgb(148, 37, 42);
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 5px 0  rgb(94, 20, 24);
+}
+
+.service_list p{
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 214, 133);
+}
+
+.service_list span{
+    line-height: 30px;
+}
+
+.service_line{
+    height: 29px;
+    background: url(../image/fade_line.png) no-repeat 50% 0;
+}
+
+.service_link{
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color:rgb(255, 214, 133);
+    border: 1px solid  rgb(255, 214, 133);
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* main_logoShow start (logo作品展示) */
+.main_logoShow{
+    max-width: 1200px;
+    padding: 20px 10px;
+    margin: 0 auto 100px;
+}
+
+.logoBanner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logoBanner .banner_show ul{
+    width: 600%;
+    display: flex;
+}
+
+.logoBanner .banner_show li{
+    width: 100%;
+}
+
+.banner_dots{
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+}
+
+.banner_dots ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner_dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px 1px #fff;
+    cursor: pointer;
+}
+
+.banner_dots li.on{
+    background-color:#fff;
+}
+
+.banner_dots li+li{
+    margin-left: 15px;
+}
+
+.main_more{
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_more_title{
+    font-size: 18px;
+    color: #666;
+}
+
+.main_more_title p{
+    padding-bottom: 5px;
+    font-size: 26px;
+    font-weight: bold; 
+    color: #94252A;
+}
+
+.main_more button{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px 0 #666;
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* main_articleShow (小物設計) */
+.main_articleShow{
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.main_articleShow ul{
+    display: flex;
+}
+
+.main_articleShow li{
+    width: 50%;
+    padding: 10px;
+}
+
+/* main_adShow (廣告設計) */
+.main_adShow{
+    max-width: 1200px;
+    padding: 20px 10px;
+    margin: 0 auto 100px;  
+}
+
+.adbanner{
+    position: relative;
+}
+
+.main_adShow .banner_show{
+    overflow: hidden;
+}
+
+.main_adShow .banner_show ul{
+    width: 500%;
+    display: flex;
+}
+
+.main_adShow .banner_show li{
+    width: 100%;
+}
+
+/* main_pageShow (一頁式廣告設計) */
+.main_pageShow{
+    max-width: 1200px;
+    margin: 0 auto 100px;  
+}
+
+.main_pageShow ul{
+    width: 100%;
+    display: flex;
+}
+
+.main_pageShow li{
+    width: calc(100% / 5);
+    height: 0;
+    padding: 0 5px 30%;
+    overflow: hidden;
+}
+
+/* ========== hover & active 各別設定 ========== */
+@media (any-hover: hover){   
+    .banner_dots li:hover{
+        background-color:#fff;
+    }
+
+    .service_link:hover{
+        background-color: #000;
+        color: rgb(253, 247, 51);
+    }
+
+    .main_more button:hover{
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.banner_dots li:active{
+    background-color:#fff;
+}
+
+.service_link:active{
+    background-color: #000;
+    color: rgb(253, 247, 51);
+}
+
+.main_more button:active{
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media (min-width: 1200px){
+    .showmv_title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1000px){
+    .service_list li{
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px){
+    .main_articleShow ul{
+        flex-wrap: wrap;
+    }
+   .main_articleShow li{
+       width: 100%;
+   }
+
+   .main_articleShow li+li{
+        margin-top: 50px;
+   }
+   .main_more{
+     flex-direction: column;
+     align-items: flex-start;
+   }
+    .main_more button{
+        width: 100%;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+
+}
+
+@media (max-width: 680px){
+    .service_list li{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .main_title{
+        font-size: 20px;
+    }
+    .main_title p{
+        font-size: 50px;
+    } 
+
+    .showmv_title{
+        font-size: 18px;
+    }
+    .showmv_line{
+        height: 20px;
+    }
+}
+

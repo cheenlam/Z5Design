@@ -1,0 +1,41 @@
+.aboutBox{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px 50px;
+}
+
+.aboutImg{
+    margin-bottom: 30px;
+}
+
+.aboutMsg{
+    padding: 0 10px;
+    font-size: 14px;
+    color: #606060;
+}
+
+.aboutMsg p{
+    margin: 30px 0;
+    font-weight: bold;
+   
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.aboutMsg p:first-child{
+    margin-top: 0;
+    text-indent: 2em;
+}
+
+.aboutMsg ul{
+    margin-left: 2em;
+}
+
+.aboutMsg li{
+    line-height: 22px;
+    color: #888;
+}
+
+.aboutMsg li+li{
+    margin-top: 15px;
+}

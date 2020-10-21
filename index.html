@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"type="image/x-icon" href="image/icon.svg"media="screen" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/logoDesign.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <title>優質外包設計｜找我設計-官方網站｜Z5Design</title>
+</head>
+<body>
+    <!-- ===== header start ===== -->
+    <div class="header">
+        <div class="header_logo" id="header_logo">
+            <img src="image/topLogo.png">
+        </div>
+
+        <div class="header_menu">
+            <div class="header_menu_arrow">»</div>
+            <div class="header_menu_close"></div>
+            <ul>
+                <li class="on"><span>首頁</span></li>
+                <li><span>關於我們</span></li>
+                <li><span>聯絡我們</span></li>
+                <li><span>Q & A</span></li>
+                <li>
+                    <span>服務一覽</span>
+                    <ul class="header_details">
+                        <li>LOGO設計</li>
+                        <li>包裝設計</li>
+                        <li>廣告設計</li>
+                        <li>一頁式廣告</li>
+                        <li>各式印刷</li>
+                        <li>商品攝影</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== content start ===== -->
+    <div class="content"></div>
+
+    <!-- ===== footer start ===== -->
+    <div class="footer">
+        <div class="ft_top">
+            <div class="ft_link">
+                <div>
+                    <p>service</p>
+                    <ul>
+                        <li class="ft_hover">LOGO設計</li>
+                        <li class="ft_hover">包裝設計</li>
+                        <li class="ft_hover">廣告設計</li>
+                        <li class="ft_hover">一頁式廣告</li>
+                        <li class="ft_hover">各式印刷</li>
+                        <li class="ft_hover">商品攝影</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>about</p>
+                    <ul>
+                        <li class="ft_hover">關於我們</li>
+                        <li class="ft_hover">聯絡我們</li>
+                        <li class="ft_hover">Q & A</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>contact</p>
+                    <ul>
+                        <li>LineID：@Z5Design</li>
+                        <li>E-mail：Z5Design@gmail.com</li>
+                        <li>Phone：(04) 1234-5678</li>
+                        <li>台中市西屯區市政北二路238號17樓A5</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>hours</p>
+                    <ul>
+                        <li>08:30 ~ 12:00 ♫ 13:30 ~ 17:30</li>
+                        <li>例假日及國定假日休息</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ft_logo">
+                <img src="image/topLogo.png">
+            </div>
+        </div>
+
+        <div class="ft_bottom">
+            <div class="ft_forum">
+                <ul>
+                    <li><img src="image/facebook.svg"></li>
+                    <li><img src="image/line.svg"></li>
+                    <li><img src="image/instagram.svg"></li>
+                </ul>
+            </div>
+
+            <p class="copyright">
+                &copy;2020 <span>Z5Design</span> ALL RIGHTS RESERVED
+            </p>
+        </div>
+    </div>
+
+
+    <!-- ===== goTop start ===== -->
+    <div class="goTop">
+        <span class="icon-circle-up"></span>
+        <p>TOP</p>
+    </div>
+
+
+<script>
+    $(document).ready(function(){ mainInclude('page/main.html')})
+    $('.header_logo').click(function(){ 
+        mainInclude('page/main.html')
+        $('.header_menu>ul>li').removeClass('on')
+        $('.header_menu>ul>li:eq(0)').addClass('on')
+    })
+    
+    // 變更content內容
+    function mainInclude(src) {
+        $.ajax({
+            url: src,
+            success: function(html) {
+                $(".content").html(html);
+            }
+        });
+        window.scrollTo({top: 0})
+        $('.crumbs li:not(:first-child)').remove()
+        $('.myCar,.hd_menu').removeClass('on')
+    }
+
+    $('.header_menu_arrow').click(function(){
+        $('.header_menu').addClass('on')
+    })
+
+
+    // menu 關閉展開
+    $(window).resize(function(){
+        $('.header_menu').removeClass('on')
+    })
+    $('.header_menu_close').click(function(){
+        $('.header_menu').removeClass('on')
+    })
+
+
+    // menu按鈕動作
+    $('.header_menu>ul>li').click(function(){
+       var find = $('.header_menu>ul>li').index(this)
+       if(find != 4){
+         $('.header_menu>ul>li').removeClass('on')
+         $(this).addClass('on')
+       }
+
+       clearInterval(banneStart);
+       clearInterval(banneStart2);
+       
+
+       switch(find){
+            case 0:
+                mainInclude('page/main.html');
+                $('.header_menu').removeClass('on')
+                break;
+            case 1:
+                mainInclude('page/about.html');
+                $('.header_menu').removeClass('on')
+                break;
+            case 2:
+                mainInclude('page/contact.html');
+                $('.header_menu').removeClass('on')
+                break;
+            case 3:
+                mainInclude('page/question.html');
+                $('.header_menu').removeClass('on')
+                break;
+       }
+    })   
+
+    $('.header_details li').click(function(){
+        $('.header_menu>ul>li').removeClass('on')
+        $(this).parents('li').addClass('on')
+
+        mainInclude('page/logoDesign.html')
+        $('.header_menu').removeClass('on')
+    })
+
+
+    // 卷軸事件
+    var bodyScroll = $(window).scroll(function() {
+            if (bodyScroll.scrollTop() > $('.header').height()) {
+                $('.goTop').addClass('on')
+
+            } else {
+                $('.goTop').removeClass('on')
+            }
+        });
+
+
+        //至頂按鈕
+        $('.goTop').click(function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        });
+
+</script>
+
+    
+</body>
+</html>
